@@ -8,6 +8,11 @@ This repository contains a Dockerized environment for running the PUMA Challenge
 ## Build the container
 You can build the Docker image using the `build.sh` script. Ensure GPU support is enabled.
 
+## Adding the weights
+Weights can be downloader from: https://zenodo.org/records/13881999
+- The content of Hover-NeXt_all_classes needs to be placed in the checkpoint folder.
+- The nnU-net/checkpoint_best.pth needs to be placed inside the folder: \nnunetv2\nnunetv2_hist\nnUNet_results\Dataset526_Mark\nnUNetTrainer_nnUNetPlans_2d\fold_4.
+
 ## Running the container.
 Use the `test_run.sh` script to run the container.
 
