@@ -1,0 +1,18 @@
+{
+    "channel_names": {
+        "0": "R",
+        "1": "G",
+        "2": "B"
+    },
+    "labels": {
+        "background": 0,
+        "tissue_stroma": 1,
+        "tissue_blood_vessel": 2,
+        "tissue_tumor": 3,
+        "tissue_epidermis": 4,
+        "tissue_necrosis": 5
+    },
+    "numTraining": 206,
+    "file_ending": ".png",
+    "name": "Dataset526_Mark"
+}

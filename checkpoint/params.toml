@@ -1,0 +1,70 @@
+dataset = "puma10"
+data_path = "/hpc/dla_patho/premium/mark/pathology_classification_github_mark/hovernext/data/5_fold_cross_val_all_classes/fold_1"
+save_path = "/hpc/dla_patho/premium/mark/pathology_classification_github_mark/hovernext/data/5_fold_cross_val_all_classes/fold_1/output"
+encoder = "convnextv2_base.fcmae_ft_in22k_in1k"
+out_channels_cls = 11
+inst_channels = 5
+pretrained = true
+batch_size = 12
+validation_batch_size = 12
+weight_decay = 0.0001
+learning_rate = 0.0001
+min_learning_rate = 1e-7
+training_steps = 30000
+validation_step = 1000
+checkpoint_step = 10000
+warmup_steps = 10000
+fl_gamma = 2
+loss_lambda = 0.1
+label_smoothing = 0.1
+use_weighted_sampling = true
+use_ema_loss = false
+tta = 16
+eval_optim_metric = "f1"
+n_rounds = 5
+save = true
+f1_metric_ccrop = 256
+match_euc_dist = 12
+eval_criteria = "f1"
+max_hole_size = 128
+checkpoint_path = ""
+experiment = "5_fold_cross_val_all_classes_fold_1_2"
+seed = 42
+fold = 2
+test_as_val = true
+optim_metric = "f1"
+num_workers = 4
+use_amp = true
+color_scale = 0.4
+
+[aug_params_fast.mirror]
+prob_x = 0.5
+prob_y = 0.5
+prob = 0.7
+
+[aug_params_fast.translate]
+max_percent = 0.05
+prob = 0.5
+
+[aug_params_fast.scale]
+min = 0.8
+max = 1.2
+prob = 0.5
+
+[aug_params_fast.zoom]
+min = 0.5
+max = 1.5
+prob = 0.5
+
+[aug_params_fast.rotate]
+max_degree = 179
+prob = 0.75
+
+[aug_params_fast.shear]
+max_percent = 0.1
+prob = 0.5
+
+[aug_params_fast.elastic]
+alpha = [ 120, 120,]
+sigma = 8
+prob = 0.7
